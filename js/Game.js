@@ -82,7 +82,7 @@ class Game {
           diver[index-1].x = x;
           diver[index-1].y = y;*/
 
-          x =displayWidth-allPlayers[plr].distance;
+          x =-allPlayers[plr].distance;
           diver[index-1].x = x;
           diver[index-1].y = y;
 
@@ -113,7 +113,7 @@ class Game {
         console.log(player.distance)
       }
   
-      if(player.distance > 3900){
+      if(player.distance < -3900){
         gameState = 2;
         player.rank+=1;
         Player.updateDiverAtEnd(player.rank);
